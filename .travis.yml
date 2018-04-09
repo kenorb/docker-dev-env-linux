@@ -3,6 +3,7 @@ services:
   - docker
 script:
   - make
+after_success:
   - docker run kenorb/dev-env dpkg -l
   - docker run kenorb/dev-env df -h
 after_script:

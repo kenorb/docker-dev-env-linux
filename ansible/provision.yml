@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+    - name: Install curl
+      apt: name=curl state=present
+    - name: Install wget
+      apt: name=wget state=present
+    - name: Install Vim editor
+      apt: name=vim state=present
