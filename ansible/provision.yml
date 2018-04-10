@@ -6,3 +6,5 @@
       apt: name=wget state=present
     - name: Install Vim editor
       apt: name=vim state=present
+    - name: Install ProxyChains (TCP/DNS through proxy server)
+      apt: name=proxychains state=present
