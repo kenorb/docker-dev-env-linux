@@ -6,6 +6,8 @@
       apt: name=wget state=present
     - name: Install Vim (a terminal text editor)
       apt: name=vim state=present
+    - name: Install JQ (CLI JSON processor)
+      apt: name=jq state=present
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_torsocks.yml
 #   - import_tasks: tasks/dotfiles.yml
