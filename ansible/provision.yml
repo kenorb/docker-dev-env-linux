@@ -6,8 +6,12 @@
       apt: name=wget state=present
     - name: Install Vim (a terminal text editor)
       apt: name=vim state=present
+    - name: Install GO (Google's Programming Language)
+      apt: name=golang state=present
     - name: Install JQ (CLI JSON processor)
       apt: name=jq state=present
+#   - name: Install pup (CLI HTML processor)
+#     apt: name=pup state=present
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_torsocks.yml
 #   - import_tasks: tasks/dotfiles.yml
