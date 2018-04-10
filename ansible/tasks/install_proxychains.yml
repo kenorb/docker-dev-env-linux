@@ -1,0 +1,3 @@
+---
+- name: Install ProxyChains (TCP/DNS through proxy server)
+  apt: name=proxychains state=present

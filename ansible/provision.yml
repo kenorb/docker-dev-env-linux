@@ -6,7 +6,7 @@
       apt: name=wget state=present
     - name: Install Vim (a terminal text editor)
       apt: name=vim state=present
-    - name: Install ProxyChains (TCP/DNS through proxy server)
-      apt: name=proxychains state=present
-    - name: Install torsocks (library to torify applications)
-      apt: name=torsocks state=present
+    - import_tasks: tasks/install_proxychains.yml
+    - import_tasks: tasks/install_torsocks.yml
+#   - import_tasks: tasks/dotfiles.yml
+#   - import_tasks: tasks/gitconfig.yml
