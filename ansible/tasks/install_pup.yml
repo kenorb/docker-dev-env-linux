@@ -1,0 +1,10 @@
+---
+- name: Install GO (Google's Programming Language)
+  apt: name=golang state=present
+  register: go_installed
+- name: Install pup (CLI HTML processor)
+  command: go get github.com/ericchiang/pup creates=/usr/local/bin/pup
+  when: go_installed is success
+- name: Install xpup (CLI XML processor)
+  command: go get github.com/ericchiang/xpup creates=/usr/local/bin/xpup
+  when: go_installed is success
