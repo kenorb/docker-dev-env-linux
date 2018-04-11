@@ -1,0 +1,7 @@
+---
+- name: Install Cargo (The Rust package manager)
+  apt: name=cargo state=present
+  register: cargo_installed
+- name: Install rargs (CLI utility with pattern matching support)
+  command: cargo install --git https://github.com/lotabout/rargs.git
+  when: cargo_installed is success

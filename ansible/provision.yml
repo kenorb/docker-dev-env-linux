@@ -1,5 +1,7 @@
 - hosts: localhost
   environment:
+    ANSIBLE_CONFIG: '/ansible/ansible.cfg'
+    CARGO_INSTALL_ROOT: '/usr/local'
     GOPATH: '/usr/local'
   tasks:
     - name: Install curl (CLI for transferring data)
@@ -18,5 +20,6 @@
       when: go_installed is success
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_torsocks.yml
+    - import_tasks: tasks/install_rargs.yml
 #   - import_tasks: tasks/dotfiles.yml
 #   - import_tasks: tasks/gitconfig.yml
