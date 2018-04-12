@@ -4,6 +4,8 @@
     CARGO_INSTALL_ROOT: '/usr/local'
     GOPATH: '/usr/local'
   tasks:
+    - name: Install bc (an arbitrary precision calculator)
+      apt: name=bc state=present
     - name: Install curl (CLI for transferring data)
       apt: name=curl state=present
     - name: Install wget (CLI for non-interactive downloads)
