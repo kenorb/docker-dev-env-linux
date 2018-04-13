@@ -14,6 +14,8 @@
       apt: name=vim state=present
     - name: Install JQ (CLI JSON processor)
       apt: name=jq state=present
+    - name: Install strace (debugging utility)
+      apt: name=strace state=present
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_pup.yml
     - import_tasks: tasks/install_rargs.yml
