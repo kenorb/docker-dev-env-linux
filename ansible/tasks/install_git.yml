@@ -1,0 +1,3 @@
+---
+- name: Install Git (a version control system)
+  apt: name=git state=present
