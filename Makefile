@@ -1,3 +1,6 @@
-.PHONY: build
+IMAGE := kenorb/dev-env
+.PHONY: build push
 build:
-	docker build -t kenorb/dev-env .
+	docker build -t $(IMAGE) .
+push:
+	docker push $(IMAGE)

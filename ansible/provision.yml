@@ -23,3 +23,7 @@
     - import_tasks: tasks/install_torsocks.yml
 #   - import_tasks: tasks/dotfiles.yml
 #   - import_tasks: tasks/gitconfig.yml
+    - name: Apt - Remove packages from the cache
+      apt: autoclean=yes
+    - name: Apt - Remove dependencies that are no longer required
+      apt: autoremove=yes

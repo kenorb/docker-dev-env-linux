@@ -1,7 +1,7 @@
 ---
-- name: Download setup_8.x script
-  get_url: url=https://deb.nodesource.com/setup_8.x dest=/opt mode=755
-- name: Setup Node.js
+- name: Download Node.js 8.x setup script
+  get_url: url=http://deb.nodesource.com/setup_8.x dest=/opt mode=755
+- name: Setup Node.js 8.x
   command: /opt/setup_8.x
 - name: Install Node.js (JavaScript run-time environment)
   apt: name=nodejs state=present

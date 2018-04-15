@@ -1,14 +1,14 @@
 ---
 - name: Install ProxyChains (TCP/DNS through proxy server)
   apt: name=proxychains state=present
-- name: ProxyChains - Adds available proxies
+- name: ProxyChains - Configure proxies
   shell: "/ansible/scripts/get_proxy_list.sh | tee -a /etc/proxychains.conf"
-- name: ProxyChains - Comment strict_chain
+- name: ProxyChains - Unset strict_chain
   lineinfile:
     dest: /etc/proxychains.conf
     regexp: '^strict_chain$'
     line: '#strict_chain'
-- name: ProxyChains - Uncomment random_chain
+- name: ProxyChains - Set random_chain
   lineinfile:
     dest: /etc/proxychains.conf
     regexp: '^#random_chain$'
