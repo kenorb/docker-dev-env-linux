@@ -21,6 +21,7 @@
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_pup.yml
     - import_tasks: tasks/install_rargs.yml
+    - import_tasks: tasks/install_rg.yml
     - import_tasks: tasks/install_torsocks.yml
 #   - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/configure_git.yml

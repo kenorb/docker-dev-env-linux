@@ -1,0 +1,5 @@
+---
+- name: Install snapd (a universal Linux package manager)
+  apt: name=snapd state=present
+- name: Install ripgrep (a line-oriented search tool)
+  command: snap install rg
