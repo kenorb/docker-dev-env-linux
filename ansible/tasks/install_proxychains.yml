@@ -1,3 +1,5 @@
 ---
 - name: Install ProxyChains (TCP/DNS through proxy server)
   apt: name=proxychains state=present
+- name: Adds available proxies.
+  shell: /ansible/scripts/get_proxy_list.sh | tee -a /etc/proxychains.conf
