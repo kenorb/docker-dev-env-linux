@@ -1,0 +1,7 @@
+---
+- name: Setup Node.js
+  shell: "curl -sL https://deb.nodesource.com/setup_8.x | bash -"
+- name: Install Node.js (JavaScript run-time environment)
+  apt: name=nodejs state=present
+#- name: Install npm (a package manager for the JavaScript)
+#  apt: name=npm state=present
