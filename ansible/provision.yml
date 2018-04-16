@@ -3,6 +3,7 @@
     ANSIBLE_CONFIG: '/ansible/ansible.cfg'
     CARGO_INSTALL_ROOT: '/usr/local'
     GOPATH: '/usr/local'
+    RUSTFLAGS: '-C prefer-dynamic'
   tasks:
     - name: Install bc (an arbitrary precision calculator)
       apt: name=bc state=present
