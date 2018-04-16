@@ -3,5 +3,5 @@
   become: true
   lineinfile:
     dest: /etc/sudoers
-    regexp: '^%wheel'
-    line: '%wheel ALL=(ALL) ALL'
+    regexp: '^%sudo'
+    line: '%sudo	ALL=(ALL:ALL) NOPASSWD:ALL'
