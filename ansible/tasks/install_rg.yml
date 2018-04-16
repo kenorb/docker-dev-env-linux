@@ -1,5 +1,7 @@
 ---
-- name: Install snapd (a universal Linux package manager)
-  apt: name=snapd state=present
+- name: Install Cargo (The Rust package manager)
+  apt: name=cargo state=present
+  register: cargo_installed
 - name: Install ripgrep (a line-oriented search tool)
-  command: snap install rg
+  command: cargo install ripgrep
+  when: cargo_installed is success
