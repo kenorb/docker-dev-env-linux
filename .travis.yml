@@ -4,8 +4,8 @@ services:
 script:
   - make
 after_success:
-  - docker run kenorb/dev-env dpkg -l
   - docker run kenorb/dev-env df -h
+  - docker run kenorb/dev-env find / -type f -size +10M -ls
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
       docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
       make push;

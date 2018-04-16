@@ -7,4 +7,6 @@ RUN printf '[local]\r\nlocalhost ansible_python_interpreter="env python3"\r\n' >
 ADD ansible /ansible
 ADD scripts /ansible/scripts
 RUN ansible-playbook /ansible/provision.yml -c local
-ENTRYPOINT ["/bin/bash"]
+RUN useradd -d /home/ubuntu -ms /bin/bash -g root -G sudo -p ubuntu ubuntu
+USER ubuntu
+WORKDIR /home/ubuntu
