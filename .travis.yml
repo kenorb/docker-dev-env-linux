@@ -1,11 +1,14 @@
 sudo: required
+env:
+  global:
+    - DOCKER_REPO=kenorb/dev-env-linux
 services:
   - docker
 script:
   - make
 after_success:
-  - docker run kenorb/dev-env df -h
-  - docker run kenorb/dev-env find / -type f -size +10M -ls
+  - docker run $DOCKER_REPO df -h
+  - docker run $DOCKER_REPO find / -type f -size +10M -ls
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then
       docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD;
       make push;
