@@ -16,16 +16,16 @@
       apt: name=jq state=present
     - name: Install strace (debugging utility)
       apt: name=strace state=present
-    - import_tasks: tasks/install_git.yml
-    - import_tasks: tasks/install_nodejs.yml
-    - import_tasks: tasks/install_proxychains.yml
-    - import_tasks: tasks/install_pup.yml
-    - import_tasks: tasks/install_rargs.yml
-    - import_tasks: tasks/install_rg.yml
-    - import_tasks: tasks/install_torsocks.yml
-#   - import_tasks: tasks/dotfiles.yml
     - import_tasks: tasks/configure_git.yml
     - import_tasks: tasks/configure_sudo.yml
+    - import_tasks: tasks/install_git.yml
+    - import_tasks: tasks/install_proxychains.yml
+    - import_tasks: tasks/install_pup.yml
+    - import_tasks: tasks/install_rg.yml
+    - import_tasks: tasks/install_tor.yml
+#   - import_tasks: tasks/dotfiles.yml
+#   - import_tasks: tasks/install_nodejs.yml
+#   - import_tasks: tasks/install_rargs.yml
     - name: Apt - Remove packages from the cache
       apt: autoclean=yes
     - name: Apt - Remove dependencies that are no longer required

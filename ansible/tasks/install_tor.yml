@@ -1,3 +1,5 @@
 ---
+- name: Install Tor (privacy and security oriented network)
+  apt: name=tor state=present
 - name: Install torsocks (library to torify applications)
   apt: name=torsocks state=present
