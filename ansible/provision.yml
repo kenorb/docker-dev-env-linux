@@ -27,7 +27,7 @@
 #   - import_tasks: tasks/dotfiles.yml
 #   - import_tasks: tasks/install_nodejs.yml
 #   - import_tasks: tasks/install_rargs.yml
-    - name: Apt - Remove packages from the cache
-      apt: autoclean=yes
-    - name: Apt - Remove dependencies that are no longer required
-      apt: autoremove=yes
+    - name: Apt - Remove unused dependency packages and cleans the local repository
+      apt: autoclean=yes autoremove=yes
+    - name: Apt - Removes all packages from the package cache
+      command: apt-get clean
