@@ -10,3 +10,4 @@ RUN ansible-playbook /ansible/provision.yml -c local
 RUN useradd -d /home/ubuntu -ms /bin/bash -g root -G sudo -p ubuntu ubuntu
 USER ubuntu
 WORKDIR /home/ubuntu
+CMD ["/bin/bash"]
