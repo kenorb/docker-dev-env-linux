@@ -30,4 +30,4 @@
     - name: Apt - Remove unused dependency packages and cleans the local repository
       apt: autoclean=yes autoremove=yes
     - name: Apt - Removes all packages from the package cache
-      command: apt-get clean
+      command: apt-get clean warn=False
