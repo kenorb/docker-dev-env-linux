@@ -3,13 +3,13 @@
   apt: name=proxychains state=present
 - name: ProxyChains - Configure proxies
   shell: "/ansible/scripts/get_proxy_list.sh | tee -a /etc/proxychains.conf"
-- name: ProxyChains - Unset strict_chain
+- name: ProxyChains - Sets tcp_read_time_out
   lineinfile:
     dest: /etc/proxychains.conf
-    regexp: '^strict_chain$'
-    line: '#strict_chain'
-- name: ProxyChains - Set random_chain
+    regexp: '^tcp_read_time_out'
+    line: 'tcp_read_time_out 30000'
+- name: ProxyChains - Sets tcp_connect_time_out
   lineinfile:
     dest: /etc/proxychains.conf
-    regexp: '^#random_chain$'
-    line: 'random_chain'
+    regexp: '^tcp_connect_time_out'
+    line: 'tcp_connect_time_out 30000'
