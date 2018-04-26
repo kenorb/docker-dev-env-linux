@@ -1,0 +1,7 @@
+---
+- name: SSH - Sets no StrictHostKeyChecking
+  lineinfile:
+    dest: "/etc/ssh/ssh_config"
+    regexp: '^StrictHostKeyChecking'
+    line: 'StrictHostKeyChecking no'
+

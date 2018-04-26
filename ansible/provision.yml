@@ -18,6 +18,7 @@
     - name: Install strace (debugging utility)
       apt: name=strace state=present
     - import_tasks: tasks/configure_git.yml
+    - import_tasks: tasks/configure_ssh.yml
     - import_tasks: tasks/configure_sudo.yml
     - import_tasks: tasks/install_git.yml
     - import_tasks: tasks/install_proxychains.yml
