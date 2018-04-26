@@ -15,6 +15,8 @@
       apt: name=vim state=present
     - name: Install JQ (CLI JSON processor)
       apt: name=jq state=present
+    - name: Install less (a terminal pager program)
+      apt: name=less state=present
     - name: Install strace (debugging utility)
       apt: name=strace state=present
     - import_tasks: tasks/configure_git.yml
