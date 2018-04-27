@@ -7,18 +7,20 @@
   tasks:
     - name: Install bc (an arbitrary precision calculator)
       apt: name=bc state=present
-    - name: Install curl (CLI for transferring data)
+    - name: Install curl (a CLI for transferring data)
       apt: name=curl state=present
-    - name: Install wget (CLI for non-interactive downloads)
+    - name: Install wget (a CLI for non-interactive downloads)
       apt: name=wget state=present
     - name: Install Vim (a terminal text editor)
       apt: name=vim state=present
-    - name: Install JQ (CLI JSON processor)
+    - name: Install JQ (a CLI JSON processor)
       apt: name=jq state=present
     - name: Install less (a terminal pager program)
       apt: name=less state=present
-    - name: Install strace (debugging utility)
+    - name: Install strace (a debugging utility)
       apt: name=strace state=present
+    - name: Install Xvfb (a X11 display server)
+      apt: name=xvfb state=present
     - import_tasks: tasks/configure_git.yml
     - import_tasks: tasks/configure_ssh.yml
     - import_tasks: tasks/configure_sudo.yml
