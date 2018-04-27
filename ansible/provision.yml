@@ -30,7 +30,7 @@
     - import_tasks: tasks/install_rg.yml
     - import_tasks: tasks/install_tor.yml
 #   - import_tasks: tasks/dotfiles.yml
-#   - import_tasks: tasks/install_nodejs.yml
+    - import_tasks: tasks/install_nodejs.yml
 #   - import_tasks: tasks/install_rargs.yml
     - name: Apt - Remove unused dependency packages and cleans the local repository
       apt: autoclean=yes autoremove=yes
