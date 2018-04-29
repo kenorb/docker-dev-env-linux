@@ -24,6 +24,7 @@
     - import_tasks: tasks/configure_git.yml
     - import_tasks: tasks/configure_ssh.yml
     - import_tasks: tasks/configure_sudo.yml
+    - import_tasks: tasks/install_fd.yml
     - import_tasks: tasks/install_git.yml
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_pup.yml

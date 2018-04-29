@@ -1,0 +1,7 @@
+---
+- name: Install Cargo (The Rust package manager)
+  apt: name=cargo state=present
+  register: cargo_installed
+- name: Install fd (an alternative to "find" utility)
+  command: cargo install fd-find
+  when: cargo_installed is success
