@@ -9,6 +9,8 @@
       apt: name=bc state=present
     - name: Install curl (a CLI for transferring data)
       apt: name=curl state=present
+    - name: Install htop (an interactive process viewer)
+      apt: name=htop state=present
     - name: Install wget (a CLI for non-interactive downloads)
       apt: name=wget state=present
     - name: Install Vim (a terminal text editor)
