@@ -1,0 +1,7 @@
+---
+- name: Install screen (a full-screen window manager)
+  apt: name=screen state=present
+  register: screen_installed
+- name: Configure screen
+  command: /etc/init.d/screen-cleanup start
+  when: screen_installed is success

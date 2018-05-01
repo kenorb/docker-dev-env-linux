@@ -19,8 +19,6 @@
       apt: name=jq state=present
     - name: Install less (a terminal pager program)
       apt: name=less state=present
-    - name: Install screen (a full-screen window manager)
-      apt: name=screen state=present
     - name: Install strace (a debugging utility)
       apt: name=strace state=present
     - name: Install Xvfb (a X11 display server)
@@ -32,6 +30,7 @@
     - import_tasks: tasks/install_git.yml
     - import_tasks: tasks/install_proxychains.yml
     - import_tasks: tasks/install_pup.yml
+    - import_tasks: tasks/install_screen.yml
     - import_tasks: tasks/install_rg.yml
     - import_tasks: tasks/install_tor.yml
 #   - import_tasks: tasks/dotfiles.yml
