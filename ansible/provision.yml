@@ -19,6 +19,8 @@
       apt: name=jq state=present
     - name: Install less (a terminal pager program)
       apt: name=less state=present
+    - name: Install screen (a full-screen window manager)
+      apt: name=screen state=present
     - name: Install strace (a debugging utility)
       apt: name=strace state=present
     - name: Install Xvfb (a X11 display server)
