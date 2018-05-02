@@ -21,6 +21,8 @@
       apt: name=less state=present
     - name: Install netcat (TCP/IP swiss army knife)
       apt: name=netcat state=present
+    - name: Install nmap (a network security/port scanner)
+      apt: name=nmap state=present
     - name: Install pv (a pipeline viewer)
       apt: name=pv state=present
     - name: Install strace (a debugging utility)
