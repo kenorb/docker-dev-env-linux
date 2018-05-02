@@ -31,6 +31,8 @@
       apt: name=pv state=present
     - name: Install strace (a debugging utility)
       apt: name=strace state=present
+    - name: Install tcpdump (a CLI utility to dump traffic on a network)
+      apt: name=tcpdump state=present
     - name: Install Xvfb (a X11 display server)
       apt: name=xvfb state=present
     - import_tasks: tasks/configure_git.yml
