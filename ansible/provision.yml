@@ -7,11 +7,11 @@
   tasks:
     - name: Install bc (an arbitrary precision calculator)
       apt: name=bc state=present
-    - name: Install curl (a CLI for transferring data)
+    - name: Install curl (a CLI utility for transferring data)
       apt: name=curl state=present
     - name: Install htop (an interactive process viewer)
       apt: name=htop state=present
-    - name: Install wget (a CLI for non-interactive downloads)
+    - name: Install wget (a CLI utility for non-interactive downloads)
       apt: name=wget state=present
     - name: Install Vim (a terminal text editor)
       apt: name=vim state=present
@@ -19,6 +19,8 @@
       apt: name=jq state=present
     - name: Install less (a terminal pager program)
       apt: name=less state=present
+    - name: Install lsof (an CLI utility to list open files)
+      apt: name=lsof state=present
     - name: Install netcat (TCP/IP swiss army knife)
       apt: name=netcat state=present
     - name: Install nmap (a network security/port scanner)
