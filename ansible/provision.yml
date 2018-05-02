@@ -9,6 +9,8 @@
       apt: name=bc state=present
     - name: Install curl (a CLI utility for transferring data)
       apt: name=curl state=present
+    - name: Install gdb (a GNU debugger)
+      apt: name=gdb state=present
     - name: Install htop (an interactive process viewer)
       apt: name=htop state=present
     - name: Install wget (a CLI utility for non-interactive downloads)
