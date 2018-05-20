@@ -7,6 +7,7 @@ Docker container for local development based on Linux Ubuntu image.
 | Type            | Status      |
 | --------------: |:-----------:|
 | Travis CI build | [![CI build status](https://travis-ci.org/kenorb/docker-dev-env-linux.svg?branch=master)](https://travis-ci.org/kenorb/docker-dev-env-linux) |
+| Docker build    | [![](https://images.microbadger.com/badges/image/kenorb/dev-env-linux.svg)](https://microbadger.com/images/kenorb/dev-env-linux "Get your own image badge on microbadger.com") |
 
 # Usage
 
